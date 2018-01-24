@@ -1,18 +1,48 @@
-# Edge
+# Ymir
 
-From "Datum edge". Also represents the 'edge' of our current thinking
+Opinionated Clojure full-stack starter project.
+
+Focuses on providing a solid bases for building an SPA
+with re-frame and REST APIs with yada.
+
+Named after Ymir in Norse mythology, a proto-being who is
+the ancestor of important gods and whose dead body was used
+to create the world.
+
+These are my opionionated changes on tops of Juxt's great
+starter project called edge.
+
+It represents the 'edge' of Juxt's current thinking
 on the baseline architecture of Clojure projects. It contains
 architectural patterns for the rapid construction of robust and
 flexible systems.
 
+The alpha in the name does not mean that it is not ready for use,
+but that things might still change in a backwards incompatible
+way.
+
 ## Features
 
-Edge is a simple project demonstrating the following:
+Ymir is a simple project demonstrating the following:
 
 ### A boot-driven Clojure/ClojureScript dev and prod environment
 
+There is a dependency issue with ClojureScript and Java 9.
+Therefore it is necessary to set the following environment 
+variable when using Java 9.
+
+ 
 ```
-cd edge
+export BOOT_JVM_OPTIONS='--add-modules "java.xml.bind"'
+```
+
+If you don't have Boot installed you can also use the
+corresponding executable for your operating system
+from the bin folder (boot.sh for Unix, boot.exe for
+Windows).
+
+```
+cd ymir
 boot dev
 ```
 
@@ -21,7 +51,7 @@ Browse to localhost:3000
 To fire up a REPL, open a new session and
 
 ```
-cd edge
+cd ymir
 boot repl
 ```
 
